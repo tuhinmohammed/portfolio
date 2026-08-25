@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { assets } from "../assets/assets.js";
+import { assets } from "@/assets/assets";
 
 const Navbar = () => {
   return (

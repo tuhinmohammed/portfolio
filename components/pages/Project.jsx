@@ -1,25 +1,26 @@
-import { MoveRight } from "lucide-react";
-import {projects} from "@/assets/project";
 
+import { MoveRight } from "lucide-react";
+
+import { projects } from "@/data/project";
 
 const Project = () => {
-
-    function getStatusColor(status) {
-        const normalizedStatus = status.toLowerCase();
-        switch (normalizedStatus) {
-          case "in progress":
-            return "text-amber-500 border-amber-500";
-          case "live":
-            return "text-green-500 border-green-500";
-          default:
-            return "text-gray-500 border-gray-500";
-        }
+  function getStatusColor(status) {
+    const normalizedStatus = status.toLowerCase();
+    if (normalizedStatus === "live") {
+      return "border-[#00d4aa] text-[#00d4aa]";
+    } else if (normalizedStatus === "in progress") {
+      return "border-[#facc15] text-[#facc15]";
+    } else if (normalizedStatus === "planned") {
+      return "border-[#55748c] text-[#55748c]";
+    } else {
+      return "border-[#55748c] text-[#55748c]";
     }
+  }
 
   return (
     <section
       id="projects"
-      className="hero-grid scroll-mt-20 px-6 pb-24 pt-20 sm:px-10 lg:px-[7.5%] lg:py-28"
+      className="hero-grid scroll-mt-20 px-6 pb-24 pt-20 sm:px-10 lg:px-[7.5%] lg:py-28 cursor-pointer"
     >
       <div className="mx-auto w-full max-w-6xl">
         {/* Section heading */}
@@ -48,7 +49,9 @@ const Project = () => {
                   {project.year}
                 </p>
 
-                <span className={`rounded border px-3 py-1 font-mono text-xs ${getStatusColor(project.status)}`}>
+                <span
+                  className={`rounded border px-3 py-1 font-mono text-xs ${getStatusColor(project.status)}`}
+                >
                   {project.status}
                 </span>
               </div>
