@@ -51,9 +51,9 @@ const Experience = () => {
                       </p>
                     </div>
 
-                    {/* Duration */}
+                    {/* Period */}
                     <p className="shrink-0 font-mono text-xs tracking-[0.06em] text-[#55748c] md:pt-1">
-                      {item.period}
+                      {item.duration}
                     </p>
                   </div>
 
