@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "Project 1",
-    year: "2024",
+    title: "Bank Marketing Model",
+    year: "2026",
     status: "In Progress",
     description: "Project 1 description",
-    technologies: ["Next.js", "React", "JavaScript"],
-    link: "#",
+    technologies: ["Python", "Numpy", "Pandas", "Matplotlib","Jupyter Notebook"],
+    link: "https://github.com/tuhinmohammed/bank-marketing-subscription-prediction.git",
   },
     {
     title: "Project 2",
